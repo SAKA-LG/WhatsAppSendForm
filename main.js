@@ -1,4 +1,4 @@
-const body = document.body
+
 document.title = 'formChatWhatsApp'
 const inputMassage = document.getElementById('inputMassage')
 
