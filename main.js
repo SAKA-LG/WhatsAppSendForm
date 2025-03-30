@@ -1,9 +1,14 @@
-
-document.title = 'formChatWhatsApp'
+const body = document.body
+document.title = 'forChat'
 const inputMassage = document.getElementById('inputMassage')
+const inputNumber = document.getElementById('inputNumber')
 
 function SendWhatsApp() {
-    const FetchUrl = `https://wa.me/6285921471773?text=Halo,${inputMassage.value}&send=true`;
-    window.open(FetchUrl, '_blank')
-
+    if(inputMassage.value == '' && inputNumber.value == ''){
+        alert('Sory Something Went Wrong /:')
+    }else{
+        let number = inputNumber.value
+        const FetchUrl = `https://wa.me/${number}?text=${inputMassage.value}&send=true`;
+        window.open(FetchUrl, '_blank')
+    }
 }
